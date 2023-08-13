@@ -6,6 +6,7 @@
         <title>Clone Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
     </head>
     <body>
         <!-- Top banner for notifications -->
@@ -23,7 +24,7 @@
             <a class="company-logo">
                 <img src="./asset/asset 1.png" alt="">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -33,6 +34,7 @@
                     <li><a href="#" class="hover-link primary-button">Signup</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
        </nav>
 
@@ -104,8 +106,6 @@
                     <p>Test interaction with fitst click and navigate tests.</p>
                     <a href="#" class="hover-link secondary-button">Learn more<i class="fa-solid fa-angles-right"></i></a>
                 </div>
-            </div>
-            <div class="features-area flex">
                 <div class="features-card">
                     <img src="./asset/asset 15.svg" alt="">
                     <h3>Card Sorting</h3>
@@ -154,7 +154,7 @@
             <!-- 2 feature -->
             
             <section class="big-feature-section">
-                <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+                <div class="container flex big-feature-container" id="#second-big-feature">
                     <div class="feature-img">
                         <img src="./asset/asset 21.png" alt="">
                     </div>
@@ -317,5 +317,13 @@
 
         <!-- Font awesome kit cdn link for using icons -->
         <script src="https://kit.fontawesome.com/1df8902b2d.js" crossorigin="anonymous"></script>
+        <script>
+            const toggleButton=document.getElementById('nav-toggle');
+            const navLinks=document.getElementById('nav-links');
+
+            toggleButton.addEventListener('click',()=>{
+                navLinks.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>
